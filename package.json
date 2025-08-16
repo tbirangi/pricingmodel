@@ -8,7 +8,7 @@
     "build:dev": "ng build --configuration development",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "deploy": "ng build && npx angular-cli-ghpages --dir=dist/pricingmodel"
+    "deploy": "ng build --base-href=/pricingmodel/ && npx angular-cli-ghpages --dir=dist/pricingmodel"
   },
   "private": true,
   "dependencies": {
