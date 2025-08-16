@@ -3,14 +3,14 @@
 html, body { height: 100%; }
 body { 
   margin: 0; 
-  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-family: "Helvetica Neue", "San Serif", Roboto, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 /* Ensure Material Design fonts load properly */
 .mat-typography {
-  font-family: Roboto, "Helvetica Neue", sans-serif !important;
+  font-family: "Helvetica Neue", "San Serif", Roboto, sans-serif !important;
 }
 
 /* Force font loading for better consistency */

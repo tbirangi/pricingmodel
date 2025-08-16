@@ -3,7 +3,7 @@
   background: black;
   color: white;
   min-height: 100vh;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-family: "Helvetica Neue", "San Serif", Roboto, sans-serif;
 }
 
 h1, p {
@@ -64,7 +64,7 @@ h1, p {
   font-size: 2.5rem;
   font-weight: 300;
   text-align: center;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-family: "Helvetica Neue", "San Serif", Roboto, sans-serif;
 }
 
 .title-card mat-card-content {
