@@ -1,0 +1,71 @@
+:host {
+  display: block;
+  background: black;
+  color: white;
+  min-height: 100vh;
+}
+
+h1, p {
+  color: white;
+}
+
+.logo-card {
+  margin: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.logo-card mat-card-content {
+  text-align: left;
+  padding: 20px;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.logo-container img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.welcome-text {
+  font-size: 0.9rem;
+  color: white;
+  font-weight: 300;
+  text-align: right;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.profile-icon {
+  font-size: 18px;
+  display: inline-block;
+  color: #FFD700;
+  filter: hue-rotate(0deg) saturate(1.5) brightness(1.2);
+}
+
+.title-card {
+  margin: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.title-card h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  font-weight: 300;
+  text-align: center;
+}
+
+.title-card mat-card-content {
+  text-align: center;
+  padding: 20px;
+}
