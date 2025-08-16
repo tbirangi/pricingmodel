@@ -6,6 +6,9 @@ body {
   font-family: "Helvetica Neue", "San Serif", Roboto, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "kern" 1;
+  font-kerning: normal;
 }
 
 /* Ensure Material Design fonts load properly */
