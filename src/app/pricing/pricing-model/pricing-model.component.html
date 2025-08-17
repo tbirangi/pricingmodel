@@ -152,8 +152,92 @@
       </div>
       
       <div *ngIf="selectedButton === 'Clinical'" class="clinical-content">
-        <h2>Clinical Pricing</h2>
-        <p>Manage clinical pricing models and configurations.</p>
+        <h2>Clinical Pricing - Step 1</h2>
+        
+        <div class="clinical-layout">
+          <div class="clinical-left">
+            <div class="segment-section">
+              <h3>Customer Segment</h3>
+              <div class="button-group">
+                <button class="segment-button" 
+                        [class.selected]="selectedSegment === 'Pharma'"
+                        (click)="selectSegment('Pharma')">
+                  Pharma
+                </button>
+                <button class="segment-button" 
+                        [class.selected]="selectedSegment === 'Biotech'"
+                        (click)="selectSegment('Biotech')">
+                  Biotech
+                </button>
+                <button class="segment-button" 
+                        [class.selected]="selectedSegment === 'Lab / Diagnostics'"
+                        (click)="selectSegment('Lab / Diagnostics')">
+                  Lab / Diagnostics
+                </button>
+                <button class="segment-button" 
+                        [class.selected]="selectedSegment === 'Medical Device'"
+                        (click)="selectSegment('Medical Device')">
+                  Medical Device
+                </button>
+                <button class="segment-button" 
+                        [class.selected]="selectedSegment === 'Channels'"
+                        (click)="selectSegment('Channels')">
+                  Channels
+                </button>
+              </div>
+            </div>
+            
+            <div class="data-type-section">
+              <h3>Data Type</h3>
+              <div class="button-group">
+                <button class="data-button" 
+                        [class.selected]="selectedDataType === 'EMR / Labs'"
+                        (click)="selectDataType('EMR / Labs')">
+                  EMR / Labs
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          <div class="clinical-right">
+            <div class="summary-section">
+              <h3>Summary</h3>
+              <div class="summary-card">
+                <div class="summary-item">
+                  <span class="summary-label">Segment</span>
+                  <span class="summary-dash">-</span>
+                  <span class="summary-value">{{ selectedSegment || 'Not Selected' }}</span>
+                </div>
+                <div class="summary-item">
+                  <span class="summary-label">Data Type</span>
+                  <span class="summary-dash">-</span>
+                  <span class="summary-value">{{ selectedDataType || 'Not Selected' }}</span>
+                </div>
+                <div class="summary-item">
+                  <span class="summary-label">Model Status</span>
+                  <span class="summary-dash">-</span>
+                  <span class="summary-value">Ready</span>
+                </div>
+                <div class="summary-item">
+                  <span class="summary-label">Last Updated</span>
+                  <span class="summary-dash">-</span>
+                  <span class="summary-value">2024-01-15</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="clinical-navigation">
+          <button class="nav-button" disabled>
+            <span style="margin-right: 5px;">←</span>
+            Previous
+          </button>
+          <button class="nav-button next-button" [disabled]="!isNextButtonEnabled()" (click)="goToNextStep()">
+            Next
+            <span style="margin-left: 5px;">→</span>
+          </button>
+        </div>
       </div>
       
       <div *ngIf="selectedButton === 'Financial'" class="financial-content">

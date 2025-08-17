@@ -526,15 +526,7 @@ h1, p {
   border-color: rgba(255, 255, 255, 0.5);
 }
 
-.next-button {
-  background: rgba(0, 123, 255, 0.3) !important;
-  border-color: rgba(0, 123, 255, 0.5) !important;
-}
-
-.next-button:hover {
-  background: rgba(0, 123, 255, 0.4) !important;
-  border-color: rgba(0, 123, 255, 0.7) !important;
-}
+/* Next button now uses the same styling as Previous button */
 
 .nav-button:disabled {
   background: rgba(255, 255, 255, 0.05) !important;

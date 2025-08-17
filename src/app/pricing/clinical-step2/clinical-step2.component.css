@@ -1,3 +1,139 @@
+:host {
+  display: block;
+  background: black;
+  color: white;
+  min-height: 100vh;
+  font-family: "Helvetica Neue", "San Serif", Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+h1, p {
+  color: white;
+}
+
+.logo-card {
+  margin: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.logo-card mat-card-content {
+  text-align: left;
+  padding: 20px;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.logo-container img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.welcome-text {
+  font-size: 0.9rem;
+  color: #FFFF00;
+  font-weight: 300;
+  text-align: right;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.profile-icon {
+  font-size: 18px;
+  display: inline-block;
+}
+
+.title-card {
+  margin: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  position: relative;
+  overflow: visible;
+}
+
+.title-card h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  font-weight: 300;
+  text-align: center;
+  font-family: "Helvetica Neue", "San Serif", Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+.title-card mat-card-content {
+  padding: 20px;
+}
+
+.title-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  position: relative;
+}
+
+.title-container h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  font-weight: 300;
+  font-family: "Helvetica Neue", "San Serif", Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  display: inline-block;
+}
+
+.step-indicator {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1.2rem;
+  font-weight: 300;
+  margin-left: 15px;
+  font-family: "Helvetica Neue", "San Serif", Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+.menu-container {
+  margin-left: auto;
+  display: flex;
+  gap: 10px;
+}
+
+.menu-button {
+  color: white !important;
+  background: rgba(255, 255, 255, 0.1) !important;
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+  border-radius: 4px !important;
+  padding: 8px 16px !important;
+  font-size: 0.9rem !important;
+  transition: all 0.3s ease !important;
+}
+
+.menu-button:hover {
+  background: rgba(255, 255, 255, 0.2) !important;
+  border-color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.menu-button.selected {
+  background: rgba(255, 255, 255, 0.3) !important;
+  border-color: rgba(255, 255, 255, 0.8) !important;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3) !important;
+}
+
 .clinical-step2-card {
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);

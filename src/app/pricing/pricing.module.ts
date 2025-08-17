@@ -40,7 +40,8 @@ import { ClinicalStep2Component } from './clinical-step2/clinical-step2.componen
     MatMenuModule
   ],
   exports: [
-    PricingModelComponent
+    PricingModelComponent,
+    ClinicalStep2Component
   ]
 })
 export class PricingModule { }
