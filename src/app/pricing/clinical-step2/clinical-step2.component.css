@@ -235,6 +235,12 @@ h1, p {
   border-color: rgba(0, 123, 255, 0.7) !important;
 }
 
+.next-button:disabled {
+  background: rgba(0, 123, 255, 0.1) !important;
+  border-color: rgba(0, 123, 255, 0.2) !important;
+  color: rgba(255, 255, 255, 0.5) !important;
+}
+
 .nav-button:disabled {
   background: rgba(255, 255, 255, 0.05) !important;
   border-color: rgba(255, 255, 255, 0.1) !important;
