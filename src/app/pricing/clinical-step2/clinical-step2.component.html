@@ -1,0 +1,35 @@
+<mat-card class="clinical-step2-card">
+  <mat-card-content>
+    <h2>Clinical - Step 2</h2>
+    <p>This is the second step of the clinical process.</p>
+    
+    <!-- Placeholder content for Step 2 -->
+    <div class="step2-content">
+      <div class="info-section">
+        <h3>Selected Options from Step 1:</h3>
+        <div class="selected-info">
+          <p><strong>Customer Segment:</strong> {{ selectedSegment }}</p>
+          <p><strong>Data Type:</strong> {{ selectedDataType }}</p>
+        </div>
+      </div>
+      
+      <!-- Add your Step 2 content here -->
+      <div class="step2-form">
+        <h3>Step 2 Configuration</h3>
+        <p>Additional configuration options will go here...</p>
+      </div>
+    </div>
+    
+    <!-- Navigation Buttons -->
+    <div class="clinical-navigation">
+      <button class="nav-button prev-button" (click)="goBack()">
+        <span style="margin-right: 5px;">←</span>
+        Previous
+      </button>
+      <button class="nav-button next-button" [disabled]="!isNextButtonEnabled()">
+        Next
+        <span style="margin-left: 5px;">→</span>
+      </button>
+    </div>
+  </mat-card-content>
+</mat-card>

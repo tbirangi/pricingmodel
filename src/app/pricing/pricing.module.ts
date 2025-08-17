@@ -14,12 +14,15 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatListModule } from '@angular/material/list';
 import { MatChipsModule } from '@angular/material/chips';
+import { MatMenuModule } from '@angular/material/menu';
+import { ClinicalStep2Component } from './clinical-step2/clinical-step2.component';
 
 
 
 @NgModule({
   declarations: [
-    PricingModelComponent
+    PricingModelComponent,
+    ClinicalStep2Component
   ],
   imports: [
     CommonModule,
@@ -33,7 +36,8 @@ import { MatChipsModule } from '@angular/material/chips';
     MatIconModule,
     MatDividerModule,
     MatListModule,
-    MatChipsModule
+    MatChipsModule,
+    MatMenuModule
   ],
   exports: [
     PricingModelComponent

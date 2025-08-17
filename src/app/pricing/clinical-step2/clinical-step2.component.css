@@ -1,0 +1,114 @@
+.clinical-step2-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  margin: 20px;
+}
+
+.clinical-step2-card h2 {
+  color: white;
+  margin-bottom: 15px;
+  font-size: 1.4rem;
+  font-weight: 300;
+}
+
+.clinical-step2-card p {
+  color: white;
+  margin-bottom: 20px;
+  font-size: 1rem;
+}
+
+.step2-content {
+  margin: 20px 0;
+}
+
+.info-section {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: 20px;
+}
+
+.info-section h3 {
+  color: white;
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+.selected-info p {
+  color: rgba(255, 255, 255, 0.9);
+  margin: 8px 0;
+  font-size: 0.9rem;
+}
+
+.selected-info strong {
+  color: white;
+  font-weight: 500;
+}
+
+.step2-form {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.step2-form h3 {
+  color: white;
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+/* Navigation Styles */
+.clinical-navigation {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+  margin-top: 30px;
+  padding: 20px 0;
+}
+
+.nav-button {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  padding: 12px 24px;
+  color: white;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+}
+
+.nav-button:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.next-button {
+  background: rgba(0, 123, 255, 0.3) !important;
+  border-color: rgba(0, 123, 255, 0.5) !important;
+}
+
+.next-button:hover {
+  background: rgba(0, 123, 255, 0.4) !important;
+  border-color: rgba(0, 123, 255, 0.7) !important;
+}
+
+.nav-button:disabled {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+  color: rgba(255, 255, 255, 0.3) !important;
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.nav-button:disabled:hover {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
