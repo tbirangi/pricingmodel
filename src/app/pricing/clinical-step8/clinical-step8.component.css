@@ -405,7 +405,9 @@ h1, p {
   border-radius: 8px;
   border: 1px solid rgba(255, 255, 255, 0.1);
   height: fit-content;
-  margin-top: 178px;
+  margin-top: 20px;
+  position: relative;
+  top: 158px;
 }
 
 .actions-buttons {
