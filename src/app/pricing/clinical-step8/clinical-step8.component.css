@@ -189,6 +189,7 @@ h1, p {
 .clinical-right {
   flex: 1;
   overflow-y: auto;
+  padding-bottom: 158px;
 }
 
 /* Price Section Styles */
@@ -406,8 +407,6 @@ h1, p {
   border: 1px solid rgba(255, 255, 255, 0.1);
   height: fit-content;
   margin-top: 20px;
-  position: relative;
-  top: 158px;
 }
 
 .actions-buttons {
