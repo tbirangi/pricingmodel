@@ -397,7 +397,6 @@ h1, p {
 .clinical-left {
   flex: 2;
   display: flex;
-  flex-direction: row;
   gap: 30px;
 }
 
@@ -411,7 +410,8 @@ h1, p {
   padding-top: 0px;
   border-radius: 8px;
   border: 1px solid rgba(255, 255, 255, 0.1);
-  width: 400px
+  flex: 1;
+  min-width: 0;
 }
 
 .segment-section h3, .data-type-section h3 {
@@ -452,7 +452,7 @@ h1, p {
 
 .summary-section {
   background: rgba(255, 255, 255, 0.05);
-  padding: 20px;
+  padding: 25px;
   border-radius: 8px;
   border: 1px solid rgba(255, 255, 255, 0.1);
   height: fit-content;
@@ -466,37 +466,33 @@ h1, p {
 }
 
 .summary-card {
-  background: rgba(255, 255, 255, 0.05);
-  padding: 15px;
-  border-radius: 6px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
 .summary-item {
   display: flex;
   align-items: center;
-  margin-top: 10px;
-  font-size: 0.9rem;
-}
-
-.summary-item:last-child {
-  margin-bottom: 0;
+  gap: 10px;
 }
 
 .summary-label {
-  color: white;
-  font-weight: 500;
-  min-width: 120px;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9rem;
+  min-width: 160px;
+  flex-shrink: 0;
 }
 
 .summary-dash {
-  color: rgba(255, 255, 255, 0.6);
-  margin: 0 8px;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.8rem;
 }
 
 .summary-value {
-  color: rgba(255, 255, 255, 0.9);
-  font-style: italic;
+  color: white;
+  font-weight: 500;
+  font-size: 0.9rem;
 }
 
 /* Clinical Navigation Styles */

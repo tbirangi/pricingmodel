@@ -53,20 +53,93 @@
     <h2>Step 2: Configuration</h2>
     <p>Configure additional settings for your clinical pricing model.</p>
     
-    <!-- Placeholder content for Step 2 -->
-    <div class="step2-content">
-      <div class="info-section">
-        <h3>Selected Options from Step 1:</h3>
-        <div class="selected-info">
-          <p><strong>Customer Segment:</strong> {{ selectedSegment }}</p>
-          <p><strong>Data Type:</strong> {{ selectedDataType }}</p>
+    <!-- Step 2 Configuration -->
+    <div class="clinical-layout">
+      <div class="clinical-left">
+        <div class="therapeutic-section">
+          <h3>Therapeutic Class</h3>
+          <div class="button-group">
+            <button class="therapeutic-button" 
+                    [class.selected]="selectedTherapeutic === 'Oncology'"
+                    (click)="selectTherapeutic('Oncology')">
+              Oncology
+            </button>
+            <button class="therapeutic-button" 
+                    [class.selected]="selectedTherapeutic === 'Specialty Non Oncology'"
+                    (click)="selectTherapeutic('Specialty Non Oncology')">
+              Specialty Non Oncology
+            </button>
+            <button class="therapeutic-button" 
+                    [class.selected]="selectedTherapeutic === 'Specialty Supportive Care'"
+                    (click)="selectTherapeutic('Specialty Supportive Care')">
+              Specialty Supportive Care
+            </button>
+          </div>
+        </div>
+        
+        <div class="treatment-section">
+          <h3>Treatment Environment</h3>
+          <div class="button-group">
+            <button class="treatment-button" 
+                    [class.selected]="selectedTreatment === 'Academic'"
+                    (click)="selectTreatment('Academic')">
+              Academic
+            </button>
+            <button class="treatment-button" 
+                    [class.selected]="selectedTreatment === 'Hospital'"
+                    (click)="selectTreatment('Hospital')">
+              Hospital
+            </button>
+            <button class="treatment-button" 
+                    [class.selected]="selectedTreatment === 'Community'"
+                    (click)="selectTreatment('Community')">
+              Community
+            </button>
+            <button class="treatment-button" 
+                    [class.selected]="selectedTreatment === 'Infusion Sites'"
+                    (click)="selectTreatment('Infusion Sites')">
+              Infusion Sites
+            </button>
+          </div>
         </div>
       </div>
       
-      <!-- Add your Step 2 content here -->
-      <div class="step2-form">
-        <h3>Step 2 Configuration</h3>
-        <p>Additional configuration options will go here...</p>
+      <div class="clinical-right">
+        <div class="summary-section">
+          <h3>Summary</h3>
+          <div class="summary-card">
+            <div class="summary-item">
+              <span class="summary-label">Customer Segment</span>
+              <span class="summary-dash">-</span>
+              <span class="summary-value">{{ selectedSegment }}</span>
+            </div>
+            <div class="summary-item">
+              <span class="summary-label">Data Type</span>
+              <span class="summary-dash">-</span>
+              <span class="summary-value">{{ selectedDataType }}</span>
+            </div>
+            <div class="summary-item">
+              <span class="summary-label">Therapeutic Class</span>
+              <span class="summary-dash">-</span>
+              <span class="summary-value">{{ selectedTherapeutic || 'Not Selected' }}</span>
+            </div>
+            <div class="summary-item">
+              <span class="summary-label">Treatment Environment</span>
+              <span class="summary-dash">-</span>
+              <span class="summary-value">{{ selectedTreatment || 'Not Selected' }}</span>
+            </div>
+            <div class="summary-item">
+              <span class="summary-label">Model Status</span>
+              <span class="summary-dash">-</span>
+              <span class="summary-value">Ready</span>
+            </div>
+            <div class="summary-item">
+              <span class="summary-label">Last Updated</span>
+              <span class="summary-dash">-</span>
+              <span class="summary-value">2024-01-15</span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     

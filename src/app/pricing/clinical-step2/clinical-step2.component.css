@@ -248,3 +248,137 @@ h1, p {
   border-color: rgba(255, 255, 255, 0.1) !important;
 }
 
+/* Step 2 Specific Styles */
+.clinical-layout {
+  display: flex;
+  gap: 30px;
+}
+
+.clinical-left {
+  display: flex;
+  gap: 30px;
+  flex: 2;
+}
+
+.therapeutic-section, .treatment-section {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 25px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  flex: 1;
+  min-width: 0;
+}
+
+.clinical-right {
+  flex: 1;
+  min-width: 0;
+}
+
+.therapeutic-section h3, .treatment-section h3 {
+  color: white;
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+.therapeutic-button, .treatment-button {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  padding: 10px 20px;
+  color: white;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  width: 100%;
+  text-align: left;
+}
+
+.therapeutic-button:hover, .treatment-button:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.therapeutic-button.selected, .treatment-button.selected {
+  background: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+/* Summary Section Styles */
+.summary-section {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 25px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  height: fit-content;
+}
+
+.summary-section h3 {
+  color: white;
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+.summary-card {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.summary-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.summary-label {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9rem;
+  min-width: 160px;
+  flex-shrink: 0;
+}
+
+.summary-dash {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.8rem;
+}
+
+.summary-value {
+  color: white;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+/* Confidentiality Footer Styles */
+.confidentiality-footer {
+  margin-top: 40px;
+  padding: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.confidentiality-content {
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.confidentiality-text {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.85rem;
+  font-weight: 400;
+  margin: 0;
+  line-height: 1.4;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.confidentiality-icon {
+  font-size: 1rem;
+  opacity: 0.8;
+}
+

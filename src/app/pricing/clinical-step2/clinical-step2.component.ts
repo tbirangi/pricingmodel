@@ -9,6 +9,8 @@ import { Router, ActivatedRoute } from '@angular/router';
 export class ClinicalStep2Component implements OnInit {
   selectedSegment: string = 'Pharma'; // Default value for demo
   selectedDataType: string = 'EMR / Labs'; // Default value for demo
+  selectedTherapeutic: string = ''; // Therapeutic class selection
+  selectedTreatment: string = ''; // Treatment environment selection
   selectedButton: string = 'Clinical'; // Default to Clinical since we're in clinical step
 
   constructor(private router: Router, private route: ActivatedRoute) {}
@@ -32,13 +34,21 @@ export class ClinicalStep2Component implements OnInit {
     }
   }
 
+  selectTherapeutic(therapeutic: string) {
+    this.selectedTherapeutic = therapeutic;
+  }
+
+  selectTreatment(treatment: string) {
+    this.selectedTreatment = treatment;
+  }
+
   goBack() {
     // Navigate back to step 1 (main pricing model component) with Clinical section selected
     this.router.navigate(['/'], { queryParams: { section: 'Clinical' } });
   }
 
   isNextButtonEnabled(): boolean {
-    // Add your Step 2 validation logic here
-    return true; // For now, always enabled
+    // Enable Next button only when both Therapeutic Class and Treatment Environment are selected
+    return this.selectedTherapeutic !== '' && this.selectedTreatment !== '';
   }
 }
