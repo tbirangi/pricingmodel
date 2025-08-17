@@ -14,7 +14,7 @@ h1, p {
 }
 
 .logo-card {
-  margin: 20px;
+  margin: 10px;
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.2);
@@ -54,7 +54,7 @@ h1, p {
 }
 
 .title-card {
-  margin: 20px;
+  margin: 10px;
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.2);
@@ -126,20 +126,24 @@ h1, p {
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.2);
-  margin: 20px;
+  margin: 10px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
 }
 
 .clinical-step8-card h2 {
   color: white;
-  margin-bottom: 15px;
-  font-size: 1.4rem;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
   font-weight: 300;
 }
 
 /* Layout Styles */
 .clinical-layout {
   display: flex;
-  gap: 30px;
+  gap: 20px;
+  margin-bottom: 20px;
 }
 
 .clinical-left {
@@ -153,7 +157,7 @@ h1, p {
 /* Price Section Styles */
 .price-section {
   background: rgba(255, 255, 255, 0.05);
-  padding: 25px;
+  padding: 15px;
   border-radius: 8px;
   border: 1px solid rgba(255, 255, 255, 0.1);
   height: fit-content;
@@ -161,22 +165,22 @@ h1, p {
 
 .price-section h3 {
   color: white;
-  margin-bottom: 20px;
-  font-size: 1.2rem;
+  margin-bottom: 10px;
+  font-size: 1rem;
   font-weight: 400;
 }
 
 .price-card {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 10px;
 }
 
 .price-item {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px;
+  padding: 10px;
   background: rgba(255, 255, 255, 0.05);
   border-radius: 6px;
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -209,17 +213,17 @@ h1, p {
 /* Discount Section Styles */
 .discount-section {
   background: rgba(255, 255, 255, 0.05);
-  padding: 25px;
+  padding: 15px;
   border-radius: 8px;
   border: 1px solid rgba(255, 255, 255, 0.1);
   height: fit-content;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 .discount-section h3 {
   color: white;
-  margin-bottom: 20px;
-  font-size: 1.2rem;
+  margin-bottom: 10px;
+  font-size: 1rem;
   font-weight: 400;
 }
 
@@ -259,31 +263,31 @@ h1, p {
 /* Total Section Styles */
 .total-section {
   background: rgba(255, 255, 255, 0.05);
-  padding: 25px;
+  padding: 15px;
   border-radius: 8px;
   border: 1px solid rgba(255, 255, 255, 0.1);
   height: fit-content;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 .total-section h3 {
   color: white;
-  margin-bottom: 20px;
-  font-size: 1.2rem;
+  margin-bottom: 10px;
+  font-size: 1rem;
   font-weight: 400;
 }
 
 .total-card {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 8px;
 }
 
 .total-item {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 12px;
+  padding: 8px;
   background: rgba(255, 255, 255, 0.05);
   border-radius: 6px;
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -316,7 +320,7 @@ h1, p {
 /* Summary Section Styles */
 .summary-section {
   background: rgba(255, 255, 255, 0.05);
-  padding: 25px;
+  padding: 15px;
   border-radius: 8px;
   border: 1px solid rgba(255, 255, 255, 0.1);
   height: fit-content;
@@ -324,27 +328,27 @@ h1, p {
 
 .summary-section h3 {
   color: white;
-  margin-bottom: 20px;
-  font-size: 1.2rem;
+  margin-bottom: 10px;
+  font-size: 1rem;
   font-weight: 400;
 }
 
 .summary-card {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 8px;
 }
 
 .summary-item {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
 }
 
 .summary-label {
   color: rgba(255, 255, 255, 0.7);
-  font-size: 0.9rem;
-  min-width: 160px;
+  font-size: 0.8rem;
+  min-width: 140px;
   flex-shrink: 0;
 }
 
@@ -356,7 +360,7 @@ h1, p {
 .summary-value {
   color: white;
   font-weight: 500;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
 }
 
 /* Navigation Styles */
@@ -364,8 +368,8 @@ h1, p {
   display: flex;
   justify-content: flex-end;
   gap: 15px;
-  margin-top: 30px;
-  padding: 20px 0;
+  margin-top: 20px;
+  padding: 15px 0;
 }
 
 .nav-button {
@@ -388,8 +392,8 @@ h1, p {
 
 /* Confidentiality Footer Styles */
 .confidentiality-footer {
-  margin-top: 40px;
-  padding: 20px;
+  margin-top: 10px;
+  padding: 10px;
   border-top: 1px solid rgba(255, 255, 255, 0.2);
 }
 

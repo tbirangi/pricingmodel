@@ -3,10 +3,10 @@
   <mat-card-content>
     <div class="logo-container">
       <img src="assets/saleseer-logo.svg" alt="Saleseer Logo" style="height: 40px;">
-      <div class="welcome-text">
-        <span class="profile-icon">👤</span>
-        Welcome, User
-      </div>
+             <div class="welcome-text">
+         Welcome Robert Schmidt
+         <span class="profile-icon">👤</span>
+       </div>
     </div>
   </mat-card-content>
 </mat-card>
@@ -51,7 +51,7 @@
 
 <!-- Main Content -->
 <mat-card class="clinical-step8-card">
-  <mat-card-content>
+  <mat-card-content style="display: flex; flex-direction: column; height: 100%;">
     <h2>Step 8: Pricing Results</h2>
     
     <div class="clinical-layout">
@@ -200,13 +200,25 @@
       </div>
     </div>
     
-    <!-- Navigation -->
-    <div class="clinical-navigation">
-      <button class="nav-button" (click)="goBack()">
-        <span style="margin-right: 5px;">←</span>
-        Previous
-      </button>
-    </div>
+         <!-- Navigation -->
+     <div class="clinical-navigation">
+       <button class="nav-button" (click)="copyToClipboard()">
+         <span style="margin-right: 5px;">📋</span>
+         Copy
+       </button>
+       <button class="nav-button" (click)="exportToExcel()">
+         <span style="margin-right: 5px;">📊</span>
+         Export to Excel
+       </button>
+       <button class="nav-button" (click)="exportToPdf()">
+         <span style="margin-right: 5px;">📄</span>
+         Export to PDF
+       </button>
+       <button class="nav-button" (click)="goBack()">
+         <span style="margin-right: 5px;">←</span>
+         Previous
+       </button>
+     </div>
   </mat-card-content>
 </mat-card>
 
