@@ -2,7 +2,8 @@
   display: block;
   background: black;
   color: white;
-  min-height: 100vh;
+  height: 100vh;
+  overflow: hidden;
   font-family: "Helvetica Neue", "San Serif", Roboto, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

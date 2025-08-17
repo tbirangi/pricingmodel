@@ -51,6 +51,20 @@
           <span style="margin-right: 5px; font-size: 16px;">📚</span>
           Elsevier
         </button>
+        <button mat-button 
+                class="menu-button" 
+                [class.selected]="selectedButton === 'Quotes'"
+                (click)="onButtonClick('Quotes')">
+          <span style="margin-right: 5px; font-size: 16px;">💬</span>
+          Quotes
+        </button>
+        <button mat-button 
+                class="menu-button" 
+                [class.selected]="selectedButton === 'Reports'"
+                (click)="onButtonClick('Reports')">
+          <span style="margin-right: 5px; font-size: 16px;">📊</span>
+          Reports
+        </button>
       </div>
     </div>
   </mat-card-content>
