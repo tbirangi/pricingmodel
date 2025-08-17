@@ -44,6 +44,20 @@
           <span style="margin-right: 5px; font-size: 16px;">📚</span>
           Elsevier
         </button>
+        <button mat-button
+                class="menu-button"
+                [class.selected]="selectedButton === 'Quotes'"
+                (click)="onButtonClick('Quotes')">
+          <span style="margin-right: 5px; font-size: 16px;">💬</span>
+          Quotes
+        </button>
+        <button mat-button
+                class="menu-button"
+                [class.selected]="selectedButton === 'Reports'"
+                (click)="onButtonClick('Reports')">
+          <span style="margin-right: 5px; font-size: 16px;">📊</span>
+          Reports
+        </button>
       </div>
     </div>
   </mat-card-content>
@@ -130,97 +144,94 @@
         </div>
       </div>
       
-      <!-- Right Side - Summary -->
-      <div class="clinical-right">
-        <div class="summary-section">
-          <h3>Summary</h3>
-          <div class="summary-card">
-            <div class="summary-item">
-              <span class="summary-label">Customer Segment</span>
-              <span class="summary-dash">-</span>
-              <span class="summary-value">{{ customerSegment }}</span>
-            </div>
-            <div class="summary-item">
-              <span class="summary-label">Data Type</span>
-              <span class="summary-dash">-</span>
-              <span class="summary-value">{{ dataType }}</span>
-            </div>
-            <div class="summary-item">
-              <span class="summary-label">Therapeutic Class</span>
-              <span class="summary-dash">-</span>
-              <span class="summary-value">{{ therapeuticClass }}</span>
-            </div>
-            <div class="summary-item">
-              <span class="summary-label">Treatment Environment</span>
-              <span class="summary-dash">-</span>
-              <span class="summary-value">{{ treatmentEnvironment }}</span>
-            </div>
-            <div class="summary-item">
-              <span class="summary-label">Retrospective Timeframe</span>
-              <span class="summary-dash">-</span>
-              <span class="summary-value">{{ retrospectiveTimeframe }}</span>
-            </div>
-            <div class="summary-item">
-              <span class="summary-label">Retrospective (Months)</span>
-              <span class="summary-dash">-</span>
-              <span class="summary-value">{{ retrospectiveMonths }}</span>
-            </div>
-            <div class="summary-item">
-              <span class="summary-label">Prospective Timeframe</span>
-              <span class="summary-dash">-</span>
-              <span class="summary-value">{{ prospectiveTimeframe }}</span>
-            </div>
-            <div class="summary-item">
-              <span class="summary-label">Prospective (Months)</span>
-              <span class="summary-dash">-</span>
-              <span class="summary-value">{{ prospectiveMonths }}</span>
-            </div>
-            <div class="summary-item">
-              <span class="summary-label">Depth</span>
-              <span class="summary-dash">-</span>
-              <span class="summary-value">{{ depthStructured }}</span>
-            </div>
-            <div class="summary-item">
-              <span class="summary-label">Volume</span>
-              <span class="summary-dash">-</span>
-              <span class="summary-value">{{ volume.toLocaleString() }}</span>
-            </div>
-            <div class="summary-item">
-              <span class="summary-label">Discount</span>
-              <span class="summary-dash">-</span>
-              <span class="summary-value">{{ selectedDiscount }}%</span>
-            </div>
-            <div class="summary-item">
-              <span class="summary-label">Final Total</span>
-              <span class="summary-dash">-</span>
-              <span class="summary-value">${{ finalTotal.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) }}</span>
-            </div>
-          </div>
-        </div>
+             <!-- Right Side - Summary -->
+       <div class="clinical-right">
+         <div class="summary-section">
+           <h3>Summary</h3>
+           <div class="summary-card">
+             <div class="summary-item">
+               <span class="summary-label">Customer Segment</span>
+               <span class="summary-dash">-</span>
+               <span class="summary-value">{{ customerSegment }}</span>
+             </div>
+             <div class="summary-item">
+               <span class="summary-label">Data Type</span>
+               <span class="summary-dash">-</span>
+               <span class="summary-value">{{ dataType }}</span>
+             </div>
+             <div class="summary-item">
+               <span class="summary-label">Therapeutic Class</span>
+               <span class="summary-dash">-</span>
+               <span class="summary-value">{{ therapeuticClass }}</span>
+             </div>
+             <div class="summary-item">
+               <span class="summary-label">Treatment Environment</span>
+               <span class="summary-dash">-</span>
+               <span class="summary-value">{{ treatmentEnvironment }}</span>
+             </div>
+             <div class="summary-item">
+               <span class="summary-label">Retrospective Timeframe</span>
+               <span class="summary-dash">-</span>
+               <span class="summary-value">{{ retrospectiveTimeframe }}</span>
+             </div>
+             <div class="summary-item">
+               <span class="summary-label">Retrospective (Months)</span>
+               <span class="summary-dash">-</span>
+               <span class="summary-value">{{ retrospectiveMonths }}</span>
+             </div>
+             <div class="summary-item">
+               <span class="summary-label">Prospective Timeframe</span>
+               <span class="summary-dash">-</span>
+               <span class="summary-value">{{ prospectiveTimeframe }}</span>
+             </div>
+             <div class="summary-item">
+               <span class="summary-label">Prospective (Months)</span>
+               <span class="summary-dash">-</span>
+               <span class="summary-value">{{ prospectiveMonths }}</span>
+             </div>
+             <div class="summary-item">
+               <span class="summary-label">Depth</span>
+               <span class="summary-dash">-</span>
+               <span class="summary-value">{{ depthStructured }}</span>
+             </div>
+             <div class="summary-item">
+               <span class="summary-label">Volume</span>
+               <span class="summary-dash">-</span>
+               <span class="summary-value">{{ volume.toLocaleString() }}</span>
+             </div>
+             <div class="summary-item">
+               <span class="summary-label">Discount</span>
+               <span class="summary-dash">-</span>
+               <span class="summary-value">{{ selectedDiscount }}%</span>
+             </div>
+           </div>
+         </div>
+         
+         <!-- Actions Section under Summary -->
+         <div class="actions-section">
+           <div class="actions-buttons">
+             <button class="nav-button" (click)="copyToClipboard()">
+               <span style="margin-right: 5px;">📋</span>
+               Copy
+             </button>
+             <button class="nav-button" (click)="exportToExcel()">
+               <span style="margin-right: 5px;">📊</span>
+               Export to Excel
+             </button>
+             <button class="nav-button" (click)="exportToPdf()">
+               <span style="margin-right: 5px;">📄</span>
+               Export to PDF
+             </button>
+             <button class="nav-button" (click)="goBack()">
+               <span style="margin-right: 5px;">←</span>
+               Previous
+             </button>
+           </div>
+         </div>
+       </div>
       </div>
-    </div>
-    
-         <!-- Navigation -->
-     <div class="clinical-navigation">
-       <button class="nav-button" (click)="copyToClipboard()">
-         <span style="margin-right: 5px;">📋</span>
-         Copy
-       </button>
-       <button class="nav-button" (click)="exportToExcel()">
-         <span style="margin-right: 5px;">📊</span>
-         Export to Excel
-       </button>
-       <button class="nav-button" (click)="exportToPdf()">
-         <span style="margin-right: 5px;">📄</span>
-         Export to PDF
-       </button>
-       <button class="nav-button" (click)="goBack()">
-         <span style="margin-right: 5px;">←</span>
-         Previous
-       </button>
-     </div>
-  </mat-card-content>
-</mat-card>
+    </mat-card-content>
+  </mat-card>
 
 <!-- Confidentiality Footer -->
 <div class="confidentiality-footer">

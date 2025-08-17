@@ -225,18 +225,18 @@
                 </div>
               </div>
             </div>
+            
+            <div class="clinical-navigation">
+              <button class="nav-button" disabled>
+                <span style="margin-right: 5px;">←</span>
+                Previous
+              </button>
+              <button class="nav-button next-button" [disabled]="!isNextButtonEnabled()" (click)="goToNextStep()">
+                Next
+                <span style="margin-left: 5px;">→</span>
+              </button>
+            </div>
           </div>
-        </div>
-        
-        <div class="clinical-navigation">
-          <button class="nav-button" disabled>
-            <span style="margin-right: 5px;">←</span>
-            Previous
-          </button>
-          <button class="nav-button next-button" [disabled]="!isNextButtonEnabled()" (click)="goToNextStep()">
-            Next
-            <span style="margin-left: 5px;">→</span>
-          </button>
         </div>
       </div>
       
