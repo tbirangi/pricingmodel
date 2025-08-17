@@ -51,4 +51,17 @@ export class ClinicalStep2Component implements OnInit {
     // Enable Next button only when both Therapeutic Class and Treatment Environment are selected
     return this.selectedTherapeutic !== '' && this.selectedTreatment !== '';
   }
+
+  goToNextStep() {
+    if (this.isNextButtonEnabled()) {
+      this.router.navigate(['/clinical-step8'], {
+        queryParams: {
+          segment: this.selectedSegment,
+          dataType: this.selectedDataType,
+          therapeutic: this.selectedTherapeutic,
+          treatment: this.selectedTreatment
+        }
+      });
+    }
+  }
 }

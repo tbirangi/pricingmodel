@@ -16,13 +16,13 @@ import { MatListModule } from '@angular/material/list';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatMenuModule } from '@angular/material/menu';
 import { ClinicalStep2Component } from './clinical-step2/clinical-step2.component';
-
-
+import { ClinicalStep8Component } from './clinical-step8/clinical-step8.component';
 
 @NgModule({
   declarations: [
     PricingModelComponent,
-    ClinicalStep2Component
+    ClinicalStep2Component,
+    ClinicalStep8Component
   ],
   imports: [
     CommonModule,
@@ -41,7 +41,8 @@ import { ClinicalStep2Component } from './clinical-step2/clinical-step2.componen
   ],
   exports: [
     PricingModelComponent,
-    ClinicalStep2Component
+    ClinicalStep2Component,
+    ClinicalStep8Component
   ]
 })
 export class PricingModule { }

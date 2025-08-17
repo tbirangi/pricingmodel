@@ -1,0 +1,221 @@
+<!-- Header -->
+<mat-card class="logo-card">
+  <mat-card-content>
+    <div class="logo-container">
+      <img src="assets/saleseer-logo.svg" alt="Saleseer Logo" style="height: 40px;">
+      <div class="welcome-text">
+        <span class="profile-icon">👤</span>
+        Welcome, User
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card>
+
+<mat-card class="title-card">
+  <mat-card-content>
+    <div class="title-container">
+      <h1>Pricing Tool</h1>
+      <div class="menu-container">
+        <button mat-button
+                class="menu-button"
+                [class.selected]="selectedButton === 'Home'"
+                (click)="onButtonClick('Home')">
+          <span style="margin-right: 5px; font-size: 16px;">🏠</span>
+          Home
+        </button>
+        <button mat-button
+                class="menu-button"
+                [class.selected]="selectedButton === 'Clinical'"
+                (click)="onButtonClick('Clinical')">
+          <span style="margin-right: 5px; font-size: 16px;">🏥</span>
+          Clinical
+        </button>
+        <button mat-button
+                class="menu-button"
+                [class.selected]="selectedButton === 'Financial'"
+                (click)="onButtonClick('Financial')">
+          <span style="margin-right: 5px; font-size: 16px;">💰</span>
+          Financial
+        </button>
+        <button mat-button
+                class="menu-button"
+                [class.selected]="selectedButton === 'Elsevier'"
+                (click)="onButtonClick('Elsevier')">
+          <span style="margin-right: 5px; font-size: 16px;">📚</span>
+          Elsevier
+        </button>
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card>
+
+<!-- Main Content -->
+<mat-card class="clinical-step8-card">
+  <mat-card-content>
+    <h2>Step 8: Pricing Results</h2>
+    
+    <div class="clinical-layout">
+      <!-- Left Side - Price -->
+      <div class="clinical-left">
+        <div class="price-section">
+          <h3>Price</h3>
+          <div class="price-card">
+            <div class="price-item">
+              <span class="price-label">Retrospective</span>
+              <span class="price-value">${{ retrospectivePrice.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) }}</span>
+            </div>
+            <div class="price-item">
+              <span class="price-label">Prospective</span>
+              <span class="price-value">${{ prospectivePrice.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) }}</span>
+            </div>
+            <div class="price-item combined">
+              <span class="price-label">Combined</span>
+              <span class="price-value">${{ combinedPrice.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) }}</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="discount-section">
+          <h3>Discount</h3>
+          <div class="discount-buttons">
+            <button class="discount-button" 
+                    [class.selected]="selectedDiscount === 0" 
+                    (click)="selectDiscount(0)">
+              0%
+            </button>
+            <button class="discount-button" 
+                    [class.selected]="selectedDiscount === 5" 
+                    (click)="selectDiscount(5)">
+              5%
+            </button>
+            <button class="discount-button" 
+                    [class.selected]="selectedDiscount === 10" 
+                    (click)="selectDiscount(10)">
+              10%
+            </button>
+            <button class="discount-button" 
+                    [class.selected]="selectedDiscount === 15" 
+                    (click)="selectDiscount(15)">
+              15%
+            </button>
+            <button class="discount-button" 
+                    [class.selected]="selectedDiscount === 20" 
+                    (click)="selectDiscount(20)">
+              20%
+            </button>
+            <button class="discount-button" 
+                    [class.selected]="selectedDiscount === 25" 
+                    (click)="selectDiscount(25)">
+              25%
+            </button>
+          </div>
+        </div>
+
+        <div class="total-section">
+          <h3>Total</h3>
+          <div class="total-card">
+            <div class="total-item">
+              <span class="total-label">Combined Price</span>
+              <span class="total-value">${{ combinedPrice.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) }}</span>
+            </div>
+            <div class="total-item">
+              <span class="total-label">Discount ({{ selectedDiscount }}%)</span>
+              <span class="total-value">-${{ discountAmount.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) }}</span>
+            </div>
+            <div class="total-item final">
+              <span class="total-label">Final Total</span>
+              <span class="total-value">${{ finalTotal.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Right Side - Summary -->
+      <div class="clinical-right">
+        <div class="summary-section">
+          <h3>Summary</h3>
+          <div class="summary-card">
+            <div class="summary-item">
+              <span class="summary-label">Customer Segment</span>
+              <span class="summary-dash">-</span>
+              <span class="summary-value">{{ customerSegment }}</span>
+            </div>
+            <div class="summary-item">
+              <span class="summary-label">Data Type</span>
+              <span class="summary-dash">-</span>
+              <span class="summary-value">{{ dataType }}</span>
+            </div>
+            <div class="summary-item">
+              <span class="summary-label">Therapeutic Class</span>
+              <span class="summary-dash">-</span>
+              <span class="summary-value">{{ therapeuticClass }}</span>
+            </div>
+            <div class="summary-item">
+              <span class="summary-label">Treatment Environment</span>
+              <span class="summary-dash">-</span>
+              <span class="summary-value">{{ treatmentEnvironment }}</span>
+            </div>
+            <div class="summary-item">
+              <span class="summary-label">Retrospective Timeframe</span>
+              <span class="summary-dash">-</span>
+              <span class="summary-value">{{ retrospectiveTimeframe }}</span>
+            </div>
+            <div class="summary-item">
+              <span class="summary-label">Retrospective (Months)</span>
+              <span class="summary-dash">-</span>
+              <span class="summary-value">{{ retrospectiveMonths }}</span>
+            </div>
+            <div class="summary-item">
+              <span class="summary-label">Prospective Timeframe</span>
+              <span class="summary-dash">-</span>
+              <span class="summary-value">{{ prospectiveTimeframe }}</span>
+            </div>
+            <div class="summary-item">
+              <span class="summary-label">Prospective (Months)</span>
+              <span class="summary-dash">-</span>
+              <span class="summary-value">{{ prospectiveMonths }}</span>
+            </div>
+            <div class="summary-item">
+              <span class="summary-label">Depth</span>
+              <span class="summary-dash">-</span>
+              <span class="summary-value">{{ depthStructured }}</span>
+            </div>
+            <div class="summary-item">
+              <span class="summary-label">Volume</span>
+              <span class="summary-dash">-</span>
+              <span class="summary-value">{{ volume.toLocaleString() }}</span>
+            </div>
+            <div class="summary-item">
+              <span class="summary-label">Discount</span>
+              <span class="summary-dash">-</span>
+              <span class="summary-value">{{ selectedDiscount }}%</span>
+            </div>
+            <div class="summary-item">
+              <span class="summary-label">Final Total</span>
+              <span class="summary-dash">-</span>
+              <span class="summary-value">${{ finalTotal.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Navigation -->
+    <div class="clinical-navigation">
+      <button class="nav-button" (click)="goBack()">
+        <span style="margin-right: 5px;">←</span>
+        Previous
+      </button>
+    </div>
+  </mat-card-content>
+</mat-card>
+
+<!-- Confidentiality Footer -->
+<div class="confidentiality-footer">
+  <div class="confidentiality-content">
+    <p class="confidentiality-text">
+      <span class="confidentiality-icon">🔒</span>
+      This document contains confidential and proprietary information. Unauthorized copying, distribution, or use is strictly prohibited.
+    </p>
+  </div>
+</div>

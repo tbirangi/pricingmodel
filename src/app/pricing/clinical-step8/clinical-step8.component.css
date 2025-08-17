@@ -79,7 +79,7 @@ h1, p {
 
 .title-container {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   width: 100%;
   position: relative;
@@ -89,18 +89,6 @@ h1, p {
   margin: 0;
   font-size: 2.5rem;
   font-weight: 300;
-  font-family: "Helvetica Neue", "San Serif", Roboto, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility;
-  display: inline-block;
-}
-
-.step-indicator {
-  color: rgba(255, 255, 255, 0.7);
-  font-size: 1.2rem;
-  font-weight: 300;
-  margin-left: 15px;
   font-family: "Helvetica Neue", "San Serif", Roboto, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -134,184 +122,195 @@ h1, p {
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.3) !important;
 }
 
-.clinical-step2-card {
+.clinical-step8-card {
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.2);
   margin: 20px;
 }
 
-.clinical-step2-card h2 {
+.clinical-step8-card h2 {
   color: white;
   margin-bottom: 15px;
   font-size: 1.4rem;
   font-weight: 300;
 }
 
-.clinical-step2-card p {
-  color: white;
-  margin-bottom: 20px;
-  font-size: 1rem;
-}
-
-.step2-content {
-  margin: 20px 0;
-}
-
-.info-section {
-  background: rgba(255, 255, 255, 0.05);
-  padding: 20px;
-  border-radius: 8px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  margin-bottom: 20px;
-}
-
-.info-section h3 {
-  color: white;
-  margin-bottom: 15px;
-  font-size: 1.2rem;
-  font-weight: 400;
-}
-
-.selected-info p {
-  color: rgba(255, 255, 255, 0.9);
-  margin: 8px 0;
-  font-size: 0.9rem;
-}
-
-.selected-info strong {
-  color: white;
-  font-weight: 500;
-}
-
-.step2-form {
-  background: rgba(255, 255, 255, 0.05);
-  padding: 20px;
-  border-radius: 8px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.step2-form h3 {
-  color: white;
-  margin-bottom: 15px;
-  font-size: 1.2rem;
-  font-weight: 400;
-}
-
-/* Navigation Styles */
-.clinical-navigation {
-  display: flex;
-  justify-content: flex-end;
-  gap: 15px;
-  margin-top: 30px;
-  padding: 20px 0;
-}
-
-.nav-button {
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  border-radius: 4px;
-  padding: 12px 24px;
-  color: white;
-  font-size: 0.9rem;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  display: flex;
-  align-items: center;
-}
-
-.nav-button:hover {
-  background: rgba(255, 255, 255, 0.2);
-  border-color: rgba(255, 255, 255, 0.5);
-}
-
-.next-button {
-  background: rgba(0, 123, 255, 0.3) !important;
-  border-color: rgba(0, 123, 255, 0.5) !important;
-}
-
-.next-button:hover {
-  background: rgba(0, 123, 255, 0.4) !important;
-  border-color: rgba(0, 123, 255, 0.7) !important;
-}
-
-.next-button:disabled {
-  background: rgba(0, 123, 255, 0.1) !important;
-  border-color: rgba(0, 123, 255, 0.2) !important;
-  color: rgba(255, 255, 255, 0.5) !important;
-}
-
-.nav-button:disabled {
-  background: rgba(255, 255, 255, 0.05) !important;
-  border-color: rgba(255, 255, 255, 0.1) !important;
-  color: rgba(255, 255, 255, 0.3) !important;
-  cursor: not-allowed;
-  opacity: 0.5;
-}
-
-.nav-button:disabled:hover {
-  background: rgba(255, 255, 255, 0.05) !important;
-  border-color: rgba(255, 255, 255, 0.1) !important;
-}
-
-/* Step 2 Specific Styles */
+/* Layout Styles */
 .clinical-layout {
   display: flex;
   gap: 30px;
 }
 
 .clinical-left {
-  display: flex;
-  gap: 30px;
-  flex: 2;
-}
-
-.therapeutic-section, .treatment-section {
-  background: rgba(255, 255, 255, 0.05);
-  padding: 25px;
-  border-radius: 8px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
   flex: 1;
-  min-width: 0;
 }
 
 .clinical-right {
   flex: 1;
-  min-width: 0;
 }
 
-.therapeutic-section h3, .treatment-section h3 {
+/* Price Section Styles */
+.price-section {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 25px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  height: fit-content;
+}
+
+.price-section h3 {
   color: white;
   margin-bottom: 20px;
   font-size: 1.2rem;
   font-weight: 400;
 }
 
-.therapeutic-button, .treatment-button {
+.price-card {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.price-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.price-item.combined {
+  background: rgba(0, 123, 255, 0.1);
+  border-color: rgba(0, 123, 255, 0.3);
+  font-weight: 600;
+}
+
+.price-label {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.price-value {
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 600;
+  font-family: 'Courier New', monospace;
+}
+
+.price-item.combined .price-value {
+  color: #4CAF50;
+  font-size: 1.4rem;
+}
+
+/* Discount Section Styles */
+.discount-section {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 25px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  height: fit-content;
+  margin-top: 20px;
+}
+
+.discount-section h3 {
+  color: white;
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+.discount-buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.discount-button {
   background: rgba(255, 255, 255, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
-  padding: 10px 20px;
+  padding: 12px 16px;
   color: white;
   font-size: 0.9rem;
   cursor: pointer;
   transition: all 0.3s ease;
   display: flex;
   align-items: center;
-  margin-bottom: 10px;
-  width: 100%;
-  text-align: left;
+  justify-content: center;
+  min-width: 60px;
+  height: 40px;
 }
 
-.therapeutic-button:hover, .treatment-button:hover {
+.discount-button:hover {
   background: rgba(255, 255, 255, 0.2);
   border-color: rgba(255, 255, 255, 0.5);
 }
 
-.therapeutic-button.selected, .treatment-button.selected {
+.discount-button.selected {
   background: rgba(156, 39, 176, 0.3);
   border-color: #9C27B0;
   box-shadow: 0 0 10px rgba(156, 39, 176, 0.3);
+}
+
+/* Total Section Styles */
+.total-section {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 25px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  height: fit-content;
+  margin-top: 20px;
+}
+
+.total-section h3 {
+  color: white;
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+.total-card {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.total-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.total-item.final {
+  background: rgba(76, 175, 80, 0.1);
+  border-color: rgba(76, 175, 80, 0.3);
+  font-weight: 600;
+}
+
+.total-label {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.total-value {
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 600;
+  font-family: 'Courier New', monospace;
+}
+
+.total-item.final .total-value {
+  color: #4CAF50;
+  font-size: 1.3rem;
 }
 
 /* Summary Section Styles */
@@ -360,6 +359,33 @@ h1, p {
   font-size: 0.9rem;
 }
 
+/* Navigation Styles */
+.clinical-navigation {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+  margin-top: 30px;
+  padding: 20px 0;
+}
+
+.nav-button {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  padding: 12px 24px;
+  color: white;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+}
+
+.nav-button:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
 /* Confidentiality Footer Styles */
 .confidentiality-footer {
   margin-top: 40px;
@@ -387,4 +413,3 @@ h1, p {
   font-size: 1rem;
   opacity: 0.8;
 }
-

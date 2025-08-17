@@ -149,10 +149,10 @@
         <span style="margin-right: 5px;">←</span>
         Previous
       </button>
-      <button class="nav-button next-button" [disabled]="!isNextButtonEnabled()">
-        Next
-        <span style="margin-left: 5px;">→</span>
-      </button>
+                <button class="nav-button next-button" [disabled]="!isNextButtonEnabled()" (click)="goToNextStep()">
+            Next
+            <span style="margin-left: 5px;">→</span>
+          </button>
     </div>
   </mat-card-content>
 </mat-card>
