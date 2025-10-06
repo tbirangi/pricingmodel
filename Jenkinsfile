@@ -9,7 +9,7 @@ pipeline {
         stage('Two') {
             when {
                 expression {
-                    BRANCH_NAME == 'main'
+                    BRANCH_NAME == 'main' && CODE_CHANGED == true
                 }
             }
             steps {
@@ -24,6 +24,16 @@ pipeline {
             }
             steps {
                 echo 'Stage Three'
+            }
+        }
+        stage('Four') {
+            when {
+                expression {
+                    BRANCH_NAME == 'dev'
+                }
+            }
+            steps {
+                echo 'Stage Four'
             }
         }
     }
