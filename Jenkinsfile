@@ -6,7 +6,7 @@ pipeline {
                 echo 'Stage One'
             }
         }
-        stage('Two' {
+        stage('Two') {
             when {
                 expression {
                     BRANCH_NAME == 'main'
@@ -16,7 +16,7 @@ pipeline {
                 echo 'Stage Two'
             }
         }
-        stage('Three' {
+        stage('Three') {
             when {
                 expression {
                     BRANCH_NAME == 'dev'
