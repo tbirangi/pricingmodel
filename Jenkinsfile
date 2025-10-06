@@ -9,7 +9,7 @@ pipeline {
         stage('Two') {
             when {
                 expression {
-                    BRANCH_NAME == 'main' || BRANCH_NAME == 'main'
+                    BRANCH_NAME == 'main'
                 }
             }
             steps {
@@ -19,7 +19,7 @@ pipeline {
         stage('Three') {
             when {
                 expression {
-                    BRANCH_NAME == 'dev'
+                    BRANCH_NAME == 'dev' || BRANCH_NAME == 'main'
                 }
             }
             steps {
