@@ -1,9 +1,16 @@
+
 pipeline {
     agent any
+    environment {
+        CODE_CHANGES = true
+        NEW_VERSION = '1.0.1'
+    }
     stages {
         stage('One') {
             steps {
                 echo 'Stage One'
+                echo "CODE_CHANGES: ${CODE_CHANGES}"
+                echo "NEW_VERSION: ${NEW_VERSION}"
             }
         }
         stage('Two') {
@@ -14,6 +21,8 @@ pipeline {
             }
             steps {
                 echo 'Stage Two'
+                echo "CODE_CHANGES: ${CODE_CHANGES}"
+                echo "NEW_VERSION: ${NEW_VERSION}"
             }
         }
         stage('Three') {
@@ -24,6 +33,8 @@ pipeline {
             }
             steps {
                 echo 'Stage Three'
+                echo "CODE_CHANGES: ${CODE_CHANGES}"
+                echo "NEW_VERSION: ${NEW_VERSION}"
             }
         }
         stage('Four') {
