@@ -1,6 +1,11 @@
 
 pipeline {
     agent any
+    parameters {
+        string(name: 'BRANCH_NAME', defaultValue: 'main', description: 'The branch name')
+        choice(name:'VERSION', choices: ['1.0.1', '1.0.2', '1.0.3'], description: 'The version')
+        booleanParam(name: 'EXECUTE_TESTS', defaultValue: false, description: 'Execute tests?')
+    }
     environment {
         CODE_CHANGES = true
         NEW_VERSION = '1.0.1'
@@ -45,6 +50,17 @@ pipeline {
             }
             steps {
                 echo 'Stage Four'
+            }
+        }
+        stage('Five') {
+            when {
+                expression {
+                    params.execueTests == true
+                }
+            }
+            steps {
+                echo 'Stage Five'
+                echo "Deploying version ${params.VERSION}"
             }
         }
     }
