@@ -4,7 +4,7 @@ pipeline {
     parameters {
         string(name: 'BRANCH_NAME', defaultValue: 'main', description: 'The branch name')
         choice(name:'VERSION', choices: ['1.0.1', '1.0.2', '1.0.3'], description: 'The version')
-        booleanParam(name: 'EXECUTE_TESTS', defaultValue: false, description: 'Execute tests?')
+        booleanParam(name: 'execueTests', defaultValue: false, description: 'Execute tests?')
     }
     environment {
         CODE_CHANGES = true
@@ -55,7 +55,7 @@ pipeline {
         stage('Five') {
             when {
                 expression {
-                    params.execueTests == true
+                    params.executeTests == true
                 }
             }
             steps {
